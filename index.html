@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="dist/clipboard.min.js"></script>
+  </head>
+  <body>
+    <pre id="a" style="cursor: pointer" onclick="copyDivToClipboard()">
+      Click to copy data{
+          dasta berlangsung
+      }
+    </pre>
+
+    <script>
+      function copyDivToClipboard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("a"));
+        window.getSelection().removeAllRanges(); // clear current selection
+        window.getSelection().addRange(range); // to select text
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges(); // to deselect
+      }
+    </script>
+  </body>
+</html>
