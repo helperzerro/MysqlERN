@@ -4,24 +4,334 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="dist/clipboard.min.js"></script>
+    <title>Mysql Express React NodeJS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <pre id="a" style="cursor: pointer" onclick="copyDivToClipboard()">
-      Click to copy data{
-          dasta berlangsung
-      }
-    </pre>
+    <div class="p-5">
+      <h1 class="w-7/8 m-auto font-extrabold text-3xl lg:w-3/4">
+        BACKEND DEVELOPER
+      </h1>
+      <!-- STRUCTUR FOLDER -->
+      <p class="w-3/4 m-auto mt-6 font-extrabold text-lg lg:w-1/2">
+        Struktur Folder Backend
+      </p>
+      <div class="mt-2 w-3/4 m-auto lg:w-1/2">
+        <img src="./img/Capture1.JPG" alt="BACKEND" class="" />
+      </div>
+      <!-- DEPENDENCY -->
+      <p class="w-3/4 m-auto mt-6 font-thin text-lg lg:w-1/2">
+        Dependency yang dibutuhkan (Backend)
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >npm i express mysql2 sequelize cors
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >npm install --save-dev nodemon
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <p class="w-3/4 m-auto mt-6 font-thin text-lg lg:w-1/2">
+        Buat entry point <span class="font-bold">index.js</span> dan pastikan
+        filenya berada didalam folder backend), ketikan kode dibawah didalam
+        file <span class="font-bold">package.json</span> buat menggunakan module
+        import export pada nodeJS.
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >"type":"module",
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- CREATE TABLE di MYSQL MENGGUNAKAN SQL -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Create table di MYSQL menggunakan SQL
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >CREATE TABLE #___NAMA_TABLE___#(
+id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(200),
+  price DOUBLE,
+  createdAt DATE,
+  updateAt DATE
+)ENGINE=INNODB;
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- CONNECTION DATABASE MYSQL -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Melakukan Koneksi ke Database (Buat Folder
+        <span class="font-bold">config</span> didalam buat file
+        <span class="font-bold">database.js</span> yang berisi code dibawah:
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import { Sequelize } from "sequelize";
+
+const db = new Sequelize("#___NAMA_DATABASE___#", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+});
+
+export default db;
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- TES CONNECTION APAKAH BERHASIL -->
+      <p class="w-3/4 m-auto mt-6 font-thin text-lg lg:w-1/2">
+        Tes connection ke database apakah berhasil dengan masukan kode berikut
+        pada file <span class="font-bold">index.js</span>
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import express from "express";
+import db from "./config/database.js";
+    
+const app = express();
+
+try {
+  await db.authenticate();
+  console.log("Database connected...");
+} catch (e) {
+  console.log("Connectiion error : ", e);
+}
+
+app.get('/', (req, res) => {
+    res.send('Welcome to Home Page');
+});
+
+app.listen(5000, () => console.log("Server running at port 5000"));
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- BUAT FOLDER ROUTES DENGAN FILE INDEX.JS -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Buat folder <span class="font-bold">routes</span> dengan file
+        <span class="font-bold">index.js</span> yang berisi kode seperti
+        dibawah: (ini sudah dicampur aduk, pahami strukturnya dengan melihat
+        file dalam Folder Controllers dan Models)
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import express from "express";
+import {
+  getAllProducts,
+  getProductById,
+  createProducts,
+  updateProducts,
+  deleteProducts,
+} from "../controllers/Products.js";
+
+// kalau gak mau pakai app.get()/ikutin default,
+bisa lakukan kode dibawah
+const router = express.Router();
+
+router.get("/", getAllProducts);
+router.get("/:id", getProductById);
+router.post("/", createProducts);
+router.patch("/:id", updateProducts);
+router.delete("/:id", deleteProducts);
+
+export default router;
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- BUAT FOLDER CONTROLLERS DENGAN FILE PRODUCTS.JS -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Buat folder <span class="font-bold">controllers</span> dengan file
+        <span class="font-bold">Products.js</span> yang berisi kode seperti
+        dibawah: (ini sudah dicampur aduk, pahami strukturnya dengan melihat
+        file dalam Folder Routes dan Models)
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import Product from "../models/productModel.js";
+
+// BTW ini semua bisa dicoba dengan menggunakan POSTMAN
+// Cara mMengambil Semua Produk
+export const getAllProducts = async (req, res) => {
+  // res.send("welcome");
+  try {
+    const products = await Product.findAll();
+    res.json(products);
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+
+// Cara Mengambil Produk Berdasarkan ID
+export const getProductById = async (req, res) => {
+  // res.send("welcome");
+  try {
+    const products = await Product.findAll({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json(products[0]);
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+
+// Cara Membuat Produk Baru
+export const createProducts = async (req, res) => {
+  // res.send("welcome");
+  try {
+    const products = await Product.create(req.body);
+    res.json({
+      message: "Product Created",
+    });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+
+// Cara Mengedit Produk
+export const updateProducts = async (req, res) => {
+  // res.send("welcome");
+  try {
+    const products = await Product.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json({
+      message: "Product Updated",
+    });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+
+// Cara Menghapus Produk
+export const deleteProducts = async (req, res) => {
+  // res.send("welcome");
+  try {
+    const products = await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json({
+      message: "Product Deleted",
+    });
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- BUAT FOLDER MODELS DENGAN FILE PRODUCTMODEL.JS -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Buat folder <span class="font-bold">models</span> dengan file
+        <span class="font-bold">ProdukModel.js</span> yang berisi kode seperti
+        dibawah: (ini untuk membuat interaksi menggunakan bahasa Javascript
+        melalui api yang sudah disediakan oleh Sequelize)
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import { Sequelize } from "sequelize";
+import db from "../config/database.js";
+
+const { DataTypes } = Sequelize;
+
+const Product = db.define(
+  "products",
+  {
+    title: {
+      type: DataTypes.STRING,
+    },
+    price: {
+      type: DataTypes.DOUBLE,
+    },
+  },
+  {
+    freezeTableName: true,
+  }
+);
+
+export default Product;
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+
+      <!-- BUAT FOLDER MODELS DENGAN FILE PRODUCTMODEL.JS -->
+      <p
+        class="w-3/4 m-auto mt-12 font-thin text-lg border-t-8 rounded-md border-stone-400 lg:w-1/2"
+      >
+        Code akhir
+        <span class="font-bold">index.js</span>
+      </p>
+      <pre
+        id="a"
+        class="pl-4 pt-4 mt-4 rounded-lg flex justify-between cursor-pointer bg-gray-900 w-3/4 m-auto text-white lg:w-1/2"
+      >import express from "express";
+import db from "./config/database.js";
+import productRoutes from "./routes/index.js";
+import cors from "cors";
+
+const app = express();
+
+// try catch ini kalau dihilangin sudah gak masalah
+try {
+  await db.authenticate();
+  console.log("Database connected...");
+} catch (e) {
+  console.log("Connectiion error : ", e);
+}
+
+app.use(cors());
+app.use(express.json());
+app.use("/product", productRoutes);
+
+app.listen(5000, () => console.log("Server running at port 5000"));
+    <svg class="mr-3" onclick="copyDivToClipboard(this)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-linejoin="round" d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><path stroke-linejoin="round" d="M8.621 3.515A2 2 0 0 1 10.561 2h2.877a2 2 0 0 1 1.94 1.515L16 6H8l.621-2.485Z"/><path d="M9 12h6m-6 4h6"/></g></svg>
+  </pre>
+    </div>
 
     <script>
-      function copyDivToClipboard() {
+      function copyDivToClipboard(x) {
+        // 6 baris dibawah buat copy value yang ada di element pre
         var range = document.createRange();
-        range.selectNode(document.getElementById("a"));
+        // x.parentElement, x artinya element yang di klik, .parentElement adalah induk dari x
+        range.selectNode(x.parentElement);
         window.getSelection().removeAllRanges(); // clear current selection
         window.getSelection().addRange(range); // to select text
         document.execCommand("copy");
         window.getSelection().removeAllRanges(); // to deselect
+
+        // kasih svg nilai toogle, biar icon berwarna merah
+        x.classList.toggle("text-cyan-500");
+
+        // kasih waktu ketika 3 detik warna icon kembali ke default
+        setTimeout(() => {
+          x.classList.toggle("text-cyan-500");
+        }, 3000);
       }
     </script>
   </body>
